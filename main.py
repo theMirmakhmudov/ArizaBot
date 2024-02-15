@@ -75,6 +75,7 @@ async def check_data(message: types.Message):
     await bot.send_message(group_id, f"Ism : {data[0]}\nTelefon Raqam : {data[1]}\nTuman:{data[-1]}")
     await bot.send_location(group_id, data[2], data[3])
     await message.answer("Ma'lumotlar saqlandi")
+    data.clear()
 
 
 async def main():
